@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIM Chatroom</title>
+    <!-- Links to your styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Pulls in the classic Windows 98 layout theme -->
+    <link rel="stylesheet" href="https://unpkg.com">
+        <!-- This pulls in the secure Ably real-time network code library -->
+    <script src="https://ably.com"></script>
+
+</head>
+<body>
+
+    <!-- Main AIM Chat Window Box -->
+    <div class="window" style="width: 90%; max-width: 450px; margin: 20px auto;">
+        <!-- Window Title Bar -->
+        <div class="title-bar">
+            <div class="title-bar-text">Instant Message - AIM Chatroom</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <!-- Window Inner Body Area -->
+        <div class="window-body">
+            <!-- Chat Log Screen Display -->
+            <div class="chat-display" id="chat-box" style="height: 250px; background: white; border: 2px inset; padding: 10px; overflow-y: scroll; margin-bottom: 10px;">
+                <p style="color: blue;"><b>System:</b> Welcome to AIM! Type a message below to start chatting.</p>
+            </div>
+
+            <!-- Typing Field Area -->
+            <div class="field-row-stacked">
+                <label for="message-input">Message:</label>
+                <input id="message-input" type="text" style="width: 100%;" placeholder="Type your instant message here...">
+            </div>
+
+            <!-- Action Buttons Row -->
+            <div class="field-row" style="justify-content: flex-end; margin-top: 10px;">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links to your JavaScript function file -->
+    <script src="script.js"></script>
+</body>
+</html>
